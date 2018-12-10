@@ -22,7 +22,7 @@
     <script id="wonders-template" type="text/x-handlebars-template">
         {{#each wonders}}
             <div {{#if visited}}class="wonder visited" {{else}}class="wonder not-visited" {{/if}}>
-                <p>{{name}} - {{location}}</p>
+                <p class="name">{{name}} - {{location}}</p>
                 {{#unless visited}}
                     <p class=visit>Visit</p>
                 {{/unless}}
