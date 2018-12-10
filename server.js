@@ -7,10 +7,13 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 
 const naturalWonders = [
     { name: "Mount Everest", location: "Nepal", visited: false },
-    { name: "Grand Canyon", location: "Arizona", visited: true }
+    { name: "Grand Canyon", location: "Arizona", visited: false },
+    { name: "Botanical Gardens", location: "Singapore", visited: true },
+    { name: "Pantheon", location: "Greece", visited: false },
+    { name: "Colosseum", location: "Italy", visited: true }
 ]
 
-app.get('/wodners', function (req, res) {
+app.get('/wonders', function (req, res) {
     res.send(naturalWonders)
 })
 
