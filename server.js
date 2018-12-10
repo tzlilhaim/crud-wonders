@@ -5,7 +5,7 @@ const app = express()
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.static(path.join(__dirname, 'node_modules')))
 
-const naturalWonders = [
+const wonders = [
     { name: "Mount Everest", location: "Nepal", visited: false },
     { name: "Grand Canyon", location: "Arizona", visited: false },
     { name: "Botanical Gardens", location: "Singapore", visited: true },
@@ -14,7 +14,7 @@ const naturalWonders = [
 ]
 
 app.get('/wonders', function (req, res) {
-    res.send(naturalWonders)
+    res.send(wonders)
 })
 
 const port = 1337 //because why not
