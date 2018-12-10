@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wonders Bucket List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="wonders"></div>
+
+    <script id="wonders-template" type="text/x-handlebars-template">
+    {{#each wonders}}
+        <div class="wonder">
+            <p class={{visitedClass}}>{{name}} - {{location}}</p>
+            {{#unless visited}}
+                <button>Visit</button>
+            {{/unless}}
+        </div>
+    {{/each}}
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
