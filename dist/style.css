@@ -20,10 +20,17 @@ body{
 .wonder{
     align-content: center;
     display: grid;
-    grid-template-columns: 10fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "n n"
+    "v d";
     padding: 1vmax;
     border-radius: 4px;
     box-shadow: 1px 1px 3px black;
+}
+.name{
+    grid-area: n;
 }
 
 .visit{
@@ -32,8 +39,21 @@ body{
     cursor: pointer;
     color: #3c40c6;
     align-self: center;
+    grid-area: v;
 }
 .visit:active{
+    color: #0fbcf9;
+}
+
+.delete{
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #3c40c6;
+    align-self: center;
+    grid-area: d;
+}
+.delete:active{
     color: #0fbcf9;
 }
 
